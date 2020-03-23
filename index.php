@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Equip - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
+    <title>For You My Love</title>
+	
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	crossorigin="anonymous"></script>
+    
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
@@ -36,11 +41,26 @@
   			<div class="row description align-items-center justify-content-center">
   				<div class="col-md-8 text-center">
   					<div class="text">
-  						<h2>
+  						<h2 id="timestamp">
+						  	<script>
+								// Function ini dijalankan ketika Halaman ini dibuka pada browser
+								$(function(){
+								setInterval(timestamp, 1000);//fungsi yang dijalan setiap detik, 1000 = 1 detik
+								});
+								
+								//Fungi ajax untuk Menampilkan Jam dengan mengakses File ajax_timestamp.php
+								function timestamp() {
+								$.ajax({
+								url: 'ajax_timestamp.php',
+								success: function(data) {
+								$('#timestamp').html(data);
+								},
+								});
+								}
+							</script>
 						  	<?php
 								date_default_timezone_set('Asia/Jakarta');
 								$jam=date("H:i:s");
-								echo $jam;
 								$a = date ("H");
 							?>  
 						</h2>
