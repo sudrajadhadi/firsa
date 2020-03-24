@@ -45,17 +45,17 @@
 						  	<script>
 								// Function ini dijalankan ketika Halaman ini dibuka pada browser
 								$(function(){
-								setInterval(timestamp, 1000);//fungsi yang dijalan setiap detik, 1000 = 1 detik
+									setInterval(timestamp, 1000);//fungsi yang dijalan setiap detik, 1000 = 1 detik
 								});
 								
 								//Fungi ajax untuk Menampilkan Jam dengan mengakses File ajax_timestamp.php
 								function timestamp() {
-								$.ajax({
-								url: 'ajax_timestamp.php',
-								success: function(data) {
-								$('#timestamp').html(data);
-								},
-								});
+									$.ajax({
+										url: 'ajax_timestamp.php',
+										success: function(data) {
+											$('#timestamp').html(data);
+										},
+									});
 								}
 							</script>
 						  	<?php
@@ -67,14 +67,17 @@
   						<h4 class="mb-5">
 						  	<?php
 								if (($a>=6) && ($a<=11)){
-								echo "<b>, Selamat Pagi Firsa Wastikawati</b>";
+									echo "<b>Selamat Pagi Firsa Wastikawati</b>";
 								}
-								else if(($a>11) && ($a<=15))
-								{
-								echo ", Selamat Pagi Firsa Wastikawati";}
+								else if(($a>11) && ($a<=15)){
+									echo "Selamat Pagi Firsa Wastikawati";
+								}
 								else if (($a>15) && ($a<=18)){
-								echo ", Selamat Siang Firsa Wastikawati";}
-								else { echo "<b> Selamat Malam Firsa Wastikawati</b>";}
+									echo "Selamat Siang Firsa Wastikawati";
+								}
+								else{
+									echo "<b>Selamat Malam Firsa Wastikawati</b>";
+								}
 							?>
 							</h4>
   					</div>
