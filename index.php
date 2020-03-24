@@ -43,9 +43,9 @@
   					<div class="text">
   						<h2 id="timestamp">
 						  	<script>
-								// Function ini dijalankan ketika Halaman ini dibuka pada browser
+								//Function ini dijalankan ketika Halaman ini dibuka pada browser
 								$(function(){
-									setInterval(timestamp, 1000);//fungsi yang dijalan setiap detik, 1000 = 1 detik
+									setInterval(timestamp, 1000); //fungsi yang dijalan setiap detik, 1000 = 1 detik
 								});
 								
 								//Fungi ajax untuk Menampilkan Jam dengan mengakses File ajax_timestamp.php
@@ -62,25 +62,44 @@
 								date_default_timezone_set('Asia/Jakarta');
 								$jam=date("H:i:s");
 								$a = date ("H");
-							?>  
+							?>
 						</h2>
-  						<h4 class="mb-5">
+
+  						<h4>
 						  	<?php
 								if (($a>=6) && ($a<=11)){
-									echo "<b>Selamat Pagi Firsa Wastikawati</b>";
+									echo "<b>Selamat Pagi";
 								}
 								else if(($a>11) && ($a<=15)){
-									echo "Selamat Pagi Firsa Wastikawati";
+									echo "Selamat Pagi";
 								}
 								else if (($a>15) && ($a<=18)){
-									echo "Selamat Siang Firsa Wastikawati";
+									echo "Selamat Siang";
 								}
 								else{
-									echo "<b>Selamat Malam Firsa Wastikawati</b>";
+									echo "<b>Selamat Malam";
 								}
 							?>
-							</h4>
+						</h4>
+						<h3>Firsa Wastikawati</h3>
   					</div>
+					<div class="col-md-12" id="buttons">
+					<audio id="myAudio">
+						<source src="audio/make-you-mine.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+						<button onclick="playAudio()" type="button" class="btn btn-primary btn-round">Play Music</button>
+						<button onclick="pauseAudio()" type="button" class="btn btn-danger btn-round">Pause Music</button>
+						<script>
+							var x = document.getElementById("myAudio"); 
+							function playAudio() { 
+								x.play(); 
+							}
+							function pauseAudio() { 
+								x.pause(); 
+							}
+						</script>
+					</div>
   				</div>
   			</div>
   		</div>
