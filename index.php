@@ -81,8 +81,11 @@
 								}
 							?>
 						</h4>
+
 						<h3>Firsa Wastikawati</h3>
+						<br>
   					</div>
+					  
 					<div class="col-md-12" id="buttons">
 					<audio id="myAudio">
 						<source src="audio/make-you-mine.mp3" type="audio/mpeg">
