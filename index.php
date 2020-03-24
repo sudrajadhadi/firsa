@@ -71,10 +71,10 @@
 									echo "<b>Selamat Pagi";
 								}
 								else if(($a>11) && ($a<=15)){
-									echo "Selamat Pagi";
+									echo "Selamat Siang";
 								}
 								else if (($a>15) && ($a<=18)){
-									echo "Selamat Siang";
+									echo "Selamat Sore";
 								}
 								else{
 									echo "<b>Selamat Malam";
